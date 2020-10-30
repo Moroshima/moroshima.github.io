@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://kuroshima.top/about/index.html</loc>
+    
+    <lastmod>2020-10-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kuroshima.top/2020/10/29/test/</loc>
     
     <lastmod>2020-10-29</lastmod>
@@ -30,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://kuroshima.top/music/index.html</loc>
+    <loc>https://kuroshima.top/rss/index.html</loc>
     
     <lastmod>2020-10-29</lastmod>
     
   </url>
   
   <url>
-    <loc>https://kuroshima.top/rss/index.html</loc>
+    <loc>https://kuroshima.top/music/index.html</loc>
     
     <lastmod>2020-10-29</lastmod>
     
@@ -58,6 +65,13 @@
   </url>
   
   <url>
+    <loc>https://kuroshima.top/client/index.html</loc>
+    
+    <lastmod>2020-10-29</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://kuroshima.top/donate/index.html</loc>
     
     <lastmod>2020-10-29</lastmod>
@@ -72,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://kuroshima.top/client/index.html</loc>
-    
-    <lastmod>2020-10-29</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://kuroshima.top/bangumi/index.html</loc>
     
     <lastmod>2020-10-29</lastmod>
@@ -87,13 +94,6 @@
   
   <url>
     <loc>https://kuroshima.top/2018/12/12/Hexo-Theme-Sakura/</loc>
-    
-    <lastmod>2020-10-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://kuroshima.top/about/index.html</loc>
     
     <lastmod>2020-10-29</lastmod>
     
