@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://kuroshima.top/"/>
-  <updated>2020-10-29T10:26:35.328Z</updated>
+  <updated>2021-01-12T13:17:28.922Z</updated>
   <id>https://kuroshima.top/</id>
   
   <author>
@@ -17,76 +17,28 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://kuroshima.top/2020/10/29/test/"/>
-    <id>https://kuroshima.top/2020/10/29/test/</id>
-    <published>2020-10-29T10:26:35.000Z</published>
-    <updated>2020-10-29T10:26:35.328Z</updated>
+    <title>结构体学习笔记</title>
+    <link href="https://kuroshima.top/2020/12/22/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://kuroshima.top/2020/12/22/结构体学习笔记/</id>
+    <published>2020-12-22T06:52:00.000Z</published>
+    <updated>2021-01-12T13:17:28.922Z</updated>
     
     <summary type="html">
     
-    </summary>
-    
-      <category term="技术" scheme="https://kuroshima.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://kuroshima.top/2020/10/22/hello-world/"/>
-    <id>https://kuroshima.top/2020/10/22/hello-world/</id>
-    <published>2020-10-22T12:50:01.118Z</published>
-    <updated>2020-10-22T12:50:01.118Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
+      有关于C语言中结构体部分难点的汇总与整理
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>article title</title>
-    <link href="https://kuroshima.top/2020/10/06/article-title/"/>
-    <id>https://kuroshima.top/2020/10/06/article-title/</id>
-    <published>2020-10-06T12:26:47.000Z</published>
-    <updated>2020-10-22T12:50:01.117Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
+      <category term="学习" scheme="https://kuroshima.top/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-  </entry>
-  
-  <entry>
-    <title>Hexo-Theme-Sakura</title>
-    <link href="https://kuroshima.top/2018/12/12/Hexo-Theme-Sakura/"/>
-    <id>https://kuroshima.top/2018/12/12/Hexo-Theme-Sakura/</id>
-    <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2020-10-29T09:02:55.258Z</updated>
+      <category term="编程" scheme="https://kuroshima.top/tags/%E7%BC%96%E7%A8%8B/"/>
     
-    <summary type="html">
+      <category term="C语言" scheme="https://kuroshima.top/tags/C%E8%AF%AD%E8%A8%80/"/>
     
-      hexo-sakura主题使用教程
+      <category term="技术" scheme="https://kuroshima.top/tags/%E6%8A%80%E6%9C%AF/"/>
     
-    </summary>
-    
-      <category term="技术" scheme="https://kuroshima.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="https://kuroshima.top/tags/web/"/>
-    
-      <category term="悦读" scheme="https://kuroshima.top/tags/%E6%82%A6%E8%AF%BB/"/>
+      <category term="学习笔记" scheme="https://kuroshima.top/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   

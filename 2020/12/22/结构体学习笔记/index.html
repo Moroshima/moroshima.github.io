@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">archive_a | Kuroshima</title>
+  <title itemprop="name">结构体学习笔记 | Kuroshima</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -382,65 +382,203 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 75px;">
-</div>
-<div id="content" class="site-content">
-  <div id="main">
-    <header class="page-header">
-      <h1 class="cat-title">
-      归档</h1>
-      <span class="cat-des">
-        <p>
-        Archives</p>
-      </span>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/Moroshima/CDN-Repository@0.2/Background/02.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/Moroshima/CDN-Repository@0.2/Background/02.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      结构体学习笔记</h1>
+      <p class="entry-census">
+        <span>
+          <a href="kuroshima.top">
+            <img src="https://cdn.jsdelivr.net/gh/moroshima/CDN-Repository@0.3/Avatar/Moroshima.png">
+          </a>
+        </span>
+        <span>
+          <a href="kuroshima.top">Moroshima</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-12-22<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
     </header>
-    <div id="main-part">
-      <article class="art">
-        <div class="art-main">
-          <div class="art-content">
-            <div id="archives">
-              <p style="text-align:right;">
-                [<span id="al_expand_collapse" style="cursor: s-resize;">
-                全部展开/收缩</span>
-              ]</p>
-              
-              
-              
-              
-              
-                
-                <h3 class="al_year">2020年</h3>
-              
-              
-                
-                <ul class="al_mon_list">
-                  <li class="al_li">
-                    <span class="al_mon" style="cursor: s-resize;">
-                      12月(<span id="post-num">
-                      3</span>
-                    篇文章)</span>
-                    <ul class="al_post_list" style="">
-              
-                      <li>
-                        <a href="/2020/12/22/结构体学习笔记/">
-                          <span style="color:#0bf;">
-                          22日14:52:00</span>
-                          结构体学习笔记
-                        </a>
-                      </li>
-                      
-                    </ul>
-                  </li>
-                </ul>
-              
-              
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h3 id="结构体学习笔记"><a href="#结构体学习笔记" class="headerlink" title="结构体学习笔记"></a>结构体学习笔记</h3><ul>
+<li>关于结构体的构成</li>
+</ul>
+<pre><code class="c">struct Student    //结构体类型名=struct+结构体名    struct Student也可以认为是结构体的类型
+{
+    //以下被称为是成员列表（成员列表也被称之为是域表）
+    //各个成员组成一个结构体，一个成员也称为是结构体中的一个域
+    int num;    //成员=类型名(int)+成员名(num)
+    char name[20];
+    char sex;
+    int age;
+    float score;
+    char addr[30];
+}student;        //结构体变量名
+</code></pre>
+<ul>
+<li><p>结构体的变量名若在结构体中定义，则有以下两段代码等价：</p>
+<ul>
+<li><p>代码段1</p>
+<pre><code class="c">struct Student
+{
+    ···
+}student;
+
+int main(void)
+{
+    ···        //主函数中无需再定义结构体变量student即可直接使用该结构体变量
+}
+</code></pre>
+</li>
+<li><p>代码段2</p>
+<pre><code class="c">struct Student
+{
+    ···
+};
+
+int main(void)
+{
+    struct Student student;     //但一般情况下定义完结构体类型后还有在主函数中定义结构体变量
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>关于结构体其他的一些非正常的使用方法</p>
+</li>
+</ul>
+<pre><code class="c">//结构体允许不命名类型名，但在不命名类型名时必须要有结构体变量名
+struct
+{
+    int title;
+    int author;
+    int value;
+}student;
+//此时这段代码的效用与上文所提到的代码段1的效用相同
+//但如果这样直接定义结构体变量会降低结构体的可复用性，而我认为可复用性是结构体的最大特性，这样一种使用结构体的方式在我看来可以说是一种剥夺了结构体灵魂的行为
+</code></pre>
+<ul>
+<li>关于结构体数组在内存中的存储方式（C Prime Plus）</li>
+</ul>
+<p><img src="C:\Users\Moroshima\AppData\Roaming\Typora\typora-user-images\image-20201222203330417.png" alt="image-20201222203330417"></p>
+<ul>
+<li><p>关于箭头的使用：地址-&gt;结构成员，其等价于(*地址).结构成员</p>
+<ul>
+<li>点运算符与箭头运算符的区别</li>
+</ul>
+</li>
+<li><p>结构体在传入自定义函数时只传值，与数组不同，与基本数据类型类似</p>
+</li>
+<li><p>对于结构体类型名称的命名建议使用首字母大写的单词（#define语句的变量命名建议使用纯大写字母所构成的单词，主函数中的变量命名建议使用纯小写字母所构成的单词）</p>
+</li>
+<li><p>关于typedef的使用：</p>
+<ul>
+<li><p>typedef （原类型名） （自定义新名称）</p>
+</li>
+<li><p>typedef可以重命名任一类型（比如int、long、short、double等）</p>
+</li>
+<li><p>也可以对结构体使用 typedef 来定义一个新的数据类型名称（也就是起别名）；</p>
+</li>
+<li><p>需要注意的是，在使用typedef简化结构体命名的情况下，不可以直接在定义结构体的函数中再去定义结构体变量名</p>
+<pre><code class="c">例：
+typedef struct Student
+{
+    ···
+}student;
+//student（注意：首字母小写，不是结构体名Student）在代码段1里是结构体变量名
+//但在这段代码里student则是struct Student的别名
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>疑问：结构体的变量名在本质上是一种地址吗？</p>
+</li>
+<li><p>待解决：结构体指针、深入理解结构体</p>
+</li>
+</ul>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/moroshima/CDN-Repository@0.3/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/moroshima/CDN-Repository@0.3/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
             </div>
           </div>
         </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
       </article>
-    </div>
-  </div>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "e4d1Dk8FiAxnKrrHOL8rhLNB-gzGzoHsz",
+        appKey: "yW8XwvzDAY0p5jYMb4BCqoGX",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="kuroshima.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/moroshima/CDN-Repository@0.3/Avatar/Moroshima.png" itemprop="image" alt="Moroshima" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="kuroshima.top" itemprop="url" rel="author">Moroshima</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
